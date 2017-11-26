@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import baseStyles from "../styles/baseStyles";
 
 const Button = styled.button`
   border-radius: 3px;
@@ -11,13 +12,16 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-const HelloWorld = () => (
-  <div>
+const HelloWorld = () => {
+  baseStyles();
+  return (
     <div>
-      <h1>Hello World</h1>
-      <Button>Click me</Button>
+      <div>
+        <h1>Hello World</h1>
+        <Button>Click me</Button>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default HelloWorld;
