@@ -20,6 +20,10 @@ module.exports = {
           "eslint-loader",
           "stylelint-custom-processor-loader"
         ]
+      },
+      {
+        test: /\.(png|jpg)$/,
+        loader: "url-loader"
       }
     ]
   },
