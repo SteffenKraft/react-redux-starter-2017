@@ -7,11 +7,11 @@ module.exports = (env = {}) => {
   return {
     context: path.resolve(__dirname, "./src"),
     entry: {
-      app: "./index.js",
+      app: "./index.js"
     },
     output: {
       path: path.resolve(__dirname, "./dist"),
-      filename: "[name].bundle.[hash].js",
+      filename: "[name].bundle.[hash].js"
     },
     resolve: {
       extensions: [".js", ".jsx"]
@@ -33,13 +33,16 @@ module.exports = (env = {}) => {
         }
       ]
     },
+    devServer: {
+      historyApiFallback: isProduction ? false : true
+    },
     devtool: isProduction
       ? "hidden-source-map"
       : "cheap-module-eval-source-map",
     plugins: [
       new HtmlWebpackPlugin({
-        template: "./index.html",
-      }),
-    ],
+        template: "./index.html"
+      })
+    ]
   };
 };
