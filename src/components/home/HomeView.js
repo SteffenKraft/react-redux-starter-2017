@@ -20,10 +20,19 @@ const HomeView = () => (
     <Intro />
     <h1>Hello React Redux Starter 2017</h1>
     <Button onClick={handleClick}>I am the default Button</Button>
-    <Button type="secondary" onClick={handleClick}>
-      I am the secondary Button
+    <Button inverse onClick={handleClick}>
+      I am a inverse default Button
+    </Button>
+    <Button fullWidth type="secondary" onClick={handleClick}>
+      I am A secondary Button
+    </Button>
+    <Button inverse fullWidth type="secondary" onClick={handleClick}>
+      I am a inverse secondary Button
     </Button>
     <Button type="disabled">I am the disabled Button</Button>
+    <Button inverse type="disabled">
+      I am a inverse disabled Button
+    </Button>
   </div>
 );
 
