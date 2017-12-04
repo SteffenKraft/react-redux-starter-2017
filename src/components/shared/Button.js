@@ -15,6 +15,7 @@ const ButtonStyled = styled.button`
   border: 2px solid ${theme.colors.primary};
   cursor: pointer;
   text-transform: uppercase;
+  font-size: ${theme.fontSizes.mediumLarge};
   width: ${props => (props.fullWidth ? "100%" : "auto")};
   outline: none;
 
@@ -67,7 +68,7 @@ const Button = ({ onClick, type, children, fullWidth, styles, inverse }) => {
 Button.propTypes = {
   onClick: PropTypes.func,
   type: PropTypes.string,
-  children: PropTypes.string.isRequired,
+  children: PropTypes.any.isRequired,
   fullWidth: PropTypes.bool,
   inverse: PropTypes.bool,
   styles: PropTypes.shape({}),

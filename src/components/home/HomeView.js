@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import Sheep from "./sheep.jpg";
 import Button from "../shared/Button";
+import { IconDone, IconPower, IconFacebook } from "../shared/Icons";
 
 const Intro = styled.div`
   background-image: url(${Sheep});
@@ -18,18 +19,27 @@ const handleClick = () => {
 const HomeView = () => (
   <div>
     <Intro />
-    <h1>Hello React Redux Starter 2017</h1>
-    <Button onClick={handleClick}>I am the default Button</Button>
+    <br />
+    <IconDone />
+    <IconFacebook />
+    <IconPower />
+    <Button onClick={handleClick}>
+      <IconDone /> I am the default Button
+    </Button>
     <Button inverse onClick={handleClick}>
-      I am a inverse default Button
+      <IconDone /> I am a inverse default Button
     </Button>
     <Button fullWidth type="secondary" onClick={handleClick}>
-      I am A secondary Button
+      <IconFacebook svgStyles={{ fill: "currentColor" }} /> I am A secondary
+      Button
     </Button>
     <Button inverse fullWidth type="secondary" onClick={handleClick}>
-      I am a inverse secondary Button
+      <IconPower /> I am a inverse secondary Button
     </Button>
-    <Button type="disabled">I am the disabled Button</Button>
+    <Button type="disabled">
+      <IconPower svgProps={{ width: "40px", height: "40px" }} /> I am the
+      disabled Button
+    </Button>
     <Button inverse type="disabled">
       I am a inverse disabled Button
     </Button>

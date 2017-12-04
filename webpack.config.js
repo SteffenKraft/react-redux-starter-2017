@@ -7,14 +7,14 @@ module.exports = (env = {}) => {
   return {
     context: path.resolve(__dirname, "./src"),
     entry: {
-      app: "./index.js"
+      app: "./index.js",
     },
     output: {
       path: path.resolve(__dirname, "./dist"),
-      filename: "[name].bundle.[hash].js"
+      filename: "[name].bundle.[hash].js",
     },
     resolve: {
-      extensions: [".js", ".jsx"]
+      extensions: [".js", ".jsx"],
     },
     module: {
       rules: [
@@ -24,25 +24,25 @@ module.exports = (env = {}) => {
           use: [
             "babel-loader",
             "eslint-loader",
-            "stylelint-custom-processor-loader"
-          ]
+            "stylelint-custom-processor-loader",
+          ],
         },
         {
           test: /\.(png|jpg)$/,
-          loader: "url-loader"
-        }
-      ]
+          loader: "url-loader",
+        },
+      ],
     },
     devServer: {
-      historyApiFallback: isProduction ? false : true
+      historyApiFallback: isProduction ? false : true,
     },
     devtool: isProduction
       ? "hidden-source-map"
       : "cheap-module-eval-source-map",
     plugins: [
       new HtmlWebpackPlugin({
-        template: "./index.html"
-      })
-    ]
+        template: "./index.html",
+      }),
+    ],
   };
 };
