@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import Sheep from "./sheep.jpg";
-import Button from "../shared/Button";
+import Button from "../shared/Button/Button";
 import { IconDone, IconPower, IconFacebook } from "../shared/Icons";
 
 const Intro = styled.div`
